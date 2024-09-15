@@ -39,7 +39,7 @@ class CartManager extends ConnectorFacade
     /**
      * @return ?Cart
      */
-    public function getCart(): ?Cart
+    public function getCart()
     {
         try {
             return $this->connector->get(session_id());
