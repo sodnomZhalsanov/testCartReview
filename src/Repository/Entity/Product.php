@@ -6,6 +6,7 @@ namespace Raketa\BackendTestTask\Repository\Entity;
 
 readonly class Product
 {
+    // не объявлены properties
     public function __construct(
         private int $id,
         private string $uuid,
@@ -16,6 +17,7 @@ readonly class Product
         private string $thumbnail,
         private float $price,
     ) {
+        // не заполнены свойства
     }
 
     public function getId(): int

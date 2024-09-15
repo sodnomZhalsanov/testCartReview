@@ -15,6 +15,7 @@ class CartManager extends ConnectorFacade
 
     public function __construct($host, $port, $password)
     {
+        // прямо прокидываем какой-то индекс
         parent::__construct($host, $port, $password, 1);
         parent::build();
     }
@@ -42,6 +43,7 @@ class CartManager extends ConnectorFacade
     public function getCart()
     {
         try {
+            // session_id возращает false|string,  get ждет объект Cart
             return $this->connector->get(session_id());
         } catch (Exception $e) {
             $this->logger->error('Error');
